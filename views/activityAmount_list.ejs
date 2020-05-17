@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>GreenDiet</title>
+	  
+	<!-- 連結思源中文及css -->
+	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC" rel="stylesheet">
+	<link href="/css/menu.css" rel="stylesheet"/>  
+	<link href="/css/main.css" rel="stylesheet"/>      
+	<!------------------------->
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container-fluid">
+	<div class="row">     
+		<div class="col-md-12">
+			<!--~~~頁首~~~-->
+			<div class="header">           
+			</div> 
+			
+			<!--~~~導覽列~~~-->
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				
+				<!--~~~主頁~~~--> 
+				<button type="button" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#demo">
+					<span class="navbar-toggler-icon"></span>
+				</button> 
+				<a class="navbar-brand" href="/">主頁</a>
+				
+				<div class="collapse navbar-collapse" id="demo">
+					<ul class="navbar-nav">
+
+					<!--~~~顧客~~~-->				
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="/user/show" id="navbar user" data-toggle="dropdown">顧客</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<!--~~~帳號~~~--> 
+							 <a class="nav-link dropdown-toggle" href="/user/show" id="navbar user_info" data-toggle="dropdown">帳號</a>
+							 <div>
+								<a class="dropdown-item" href="/user/info/add/form">新增</a> 
+								<a class="dropdown-item" href="/user/info/edit/no">編輯</a>
+							 </div>
+						<!--~~~登入/登出~~~--> 
+							<a class="dropdown-item" href="/user/login/form">登入</a> 
+							<a class="dropdown-item" href="/user/logout">登出</a>
+						</div>
+					</li>						
+
+					<!--~~~營養建議~~~-->				
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbar nutrition_proposal" data-toggle="dropdown">營養建議</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<!--~~~營養分析~~~--> 
+								<a class="dropdown-item" href="/nutrition/analysis/form">紀錄</a>
+						<!--~~~營養紀錄~~~--> 
+								<a class="dropdown-item" href="/nutrition/record/form">分析</a>
+							</div>
+						</li>
+
+					<!--~~~食譜~~~--> 						
+						<li class="nav-item dropdown">
+							 <a class="nav-link dropdown-toggle" href="#" id="navbar recipe" data-toggle="dropdown">食譜管理</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+								 <a class="dropdown-item" href="/recipe/recommendation/form">推薦</a>
+								 <a class="dropdown-item" href="/recipe/add/form">新增</a> 
+								 <a class="dropdown-item" href="/recipe/query/form">搜尋</a> 
+							</div>
+						</li>
+
+					<!--~~~健康大小事~~~-->				
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbar health" data-toggle="dropdown">健康大小事</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<!--~~~網誌~~~--> 
+									<a class="dropdown-item" href="/health/blog/form">網誌</a>
+						<!--~~~心得~~~--> 
+								<a class="nav-link dropdown-toggle" href="#" id="navbar experience" data-toggle="dropdown">心得</a>
+								 <div>
+									<a class="dropdown-item" href="/experience/add/form">新增</a> 
+									<a class="dropdown-item" href="/experience/remove/form">刪除</a> 
+									<a class="dropdown-item" href="/experience/edit/no">編輯</a>
+								 </div>
+							</div>
+						</li>	
+						
+					<!--~~~營養小知識~~~-->				
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbar customer" data-toggle="dropdown">營養小知識</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<!--~~~活動量~~~--> 
+								<a class="dropdown-item" href="/activityAmount/query/form">活動量</a> 
+						<!--~~~營養分類~~~--> 
+								<a class="dropdown-item" href="/nutrition/classification/form">營養分類</a> 
+							</div>
+						</li>						
+						
+					<!--~~~關於我們~~~-->				
+					<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbar about" data-toggle="dropdown">關於我們</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+						<!--~~~關於我們~~~--> 
+								<a class="dropdown-item" href="/aboutUs/form">關於我們</a> 
+						<!--~~~常見問題~~~--> 
+								<a class="dropdown-item" href="/question/form">常見問題</a> 
+							</div>
+						</li>					
+						
+					</ul>
+					
+					<!--~~~搜尋~~~-->
+					<!-- <form class="form-inline">
+						<input class="form-control mr-sm-2" type="text"> 
+						<button class="btn btn-primary my-2 my-sm-0" type="submit">
+							搜尋
+						</button>
+					</form> -->
+					
+					<!--
+					<ul class="navbar-nav ml-md-auto">
+						<li class="nav-item active">
+							 <a class="nav-link" href="#">主頁 <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item dropdown">
+							 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Dropdown link</a>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+								 <a class="dropdown-item" href="#">Action</a> <a class="dropdown-item" href="#">Another action</a> <a class="dropdown-item" href="#">Something else here</a>
+								<div class="dropdown-divider">
+								</div> <a class="dropdown-item" href="#">Separated link</a>
+							</div>
+						</li>
+					</ul>
+					-->
+					
+				</div>
+			</nav>
+			
+			<!--~~~內文~~~-->
+			<div class="jumbotron">
+				<h2>活動量列表 </h2>
+
+					<table>
+						<thead>
+							<tr>
+								<th width="20%">活動量編號</th>
+								<th width="35%">活動量名稱</th>
+								<th width="15%">說明</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% for(var i=1; i<items.length; i++) {%>
+								<tr>
+									<td><a href="/activityAmount/one/<%= items[i].actno %>"><%= items[i].actno %></a></td>
+									
+									<td><%= items[i].act_amount %></td> <!--activamount-->
+									<td><%= items[i].act_content %></td>   <!--description-->
+								</tr> 
+							<% } %> 
+						</tbody>
+					</table>   
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/scripts.js"></script>
+  </body>
+</html>
