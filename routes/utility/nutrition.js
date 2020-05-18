@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var list = async function(){
     var result=[];
 	
-    await sql('SELECT * FROM project.nutrition ORDER BY nutrition_no')
+    await sql('SELECT * FROM project.nutrition ORDER BY nutno')
         .then((data) => {            
             result = data.rows;  
         }, (error) => {
@@ -25,7 +25,7 @@ var list = async function(){
 var one = async function(activno){
     var result={};
     
-    await sql('SELECT * FROM project.nutrition WHERE nutrition_no = $1', [nutrition_no])
+    await sql('SELECT * FROM project.nutrition WHERE nutno = $1', [nutno])
         .then((data) => {
             if(data.rows.length > 0){
                 result = data.rows[0];   

@@ -161,10 +161,10 @@
 						<tbody>
 							<% for(var i=0; i<items.length; i++) {%>
 								<tr>
-									<td><a href="/nutrition/one/<%= items[i].nutrition_no %>"><%= items[i].nutrition_no %></a></td>
+									<td><a href="/nutrition/one/<%= items[i].nutno %>"><%= items[i].nutno %></a></td>
 									
-									<td><%= items[i].nutrition_name %></td>
-									<td><%= items[i].description %></td>   
+									<td><%= items[i].nut_name %></td>
+									<td><%= items[i].nut_content %></td>   
 								</tr> 
 							<% } %> 
 						</tbody>
@@ -175,8 +175,8 @@
 	</div>
 </div>
 
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/scripts.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

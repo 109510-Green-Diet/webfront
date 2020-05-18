@@ -9,7 +9,7 @@ const sql = require('./asyncDB');
 var list = async function(){
     var result=[];
 	
-    await sql('SELECT * FROM project.blog ORDER BY serno')
+    await sql('SELECT * FROM project.blog ORDER BY blogno')
         .then((data) => {            
             result = data.rows;  
         }, (error) => {
@@ -22,10 +22,10 @@ var list = async function(){
 //------------------------------------------
 //執行資料庫動作的函式-取出單一商品
 //------------------------------------------
-var one = async function(serno){
+var one = async function(blogno){
     var result={};
     
-    await sql('SELECT * FROM project.blog WHERE serno = $1', [serno])
+    await sql('SELECT * FROM project.blog WHERE blogno = $1', [blogno])
         .then((data) => {
             if(data.rows.length > 0){
                 result = data.rows[0];   

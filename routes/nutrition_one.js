@@ -6,10 +6,10 @@ var router = express.Router();
 const nutrition = require('./utility/nutrition');
 
 //接收GET請求
-router.get('/:nutrition_no', function(req, res, next) {
-    var nutrition_no = req.params.nutrition_no;   //取出參數
+router.get('/:nutno', function(req, res, next) {
+    var nutno = req.params.nutno;   //取出參數
 
-    nutrition.one(nutrition_no).then(data => {
+    nutrition.one(nutno).then(data => {
         if (data==null){
             res.render('error');  //導向錯誤頁面
         }else if(data==-1){

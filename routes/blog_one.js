@@ -6,10 +6,10 @@ var router = express.Router();
 const blog = require('./utility/blog');
 
 //接收GET請求
-router.get('/:serno', function(req, res, next) {
-    var serno = req.params.serno;   //取出參數
+router.get('/:blogno', function(req, res, next) {
+    var blogno = req.params.blogno;   //取出參數
 
-    blog.one(serno).then(data => {
+    blog.one(blogno).then(data => {
         if (data==null){
             res.render('error');  //導向錯誤頁面
         }else if(data==-1){
