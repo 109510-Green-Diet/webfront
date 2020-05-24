@@ -150,23 +150,19 @@
 			
 			<!--~~~內文~~~-->
 			<div class="jumbotron">
-				<h2>活動量列表 </h2>
+				<h2>關於我們 </h2>
 
 					<table>
 						<thead>
 							<tr>
-								<th width="20%">活動量編號</th>
-								<th width="35%">活動量名稱</th>
-								<th width="15%">說明</th>
+								<th width="100%">關於我們</th>
 							</tr>
 						</thead>
 						<tbody>
-							<% for(var i=1; i<items.length; i++) {%>
+							<% for(var i=0; i<items.length; i++) {%>
 								<tr>
-									<td><a href="/activityAmount/one/<%= items[i].actno %>"><%= items[i].actno %></a></td>
+									<td><%= items[i].abo_answer %></td>
 									
-									<td><%= items[i].act_amount %></td> <!--activamount-->
-									<td><%= items[i].act_content %></td>   <!--description-->
 								</tr> 
 							<% } %> 
 						</tbody>

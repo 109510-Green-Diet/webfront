@@ -19,6 +19,8 @@ var nutrition_one = require('./routes/nutrition_one');
 
 var blog_list = require('./routes/blog_list');
 var blog_one = require('./routes/blog_one');
+
+var about_us_list = require('./routes/about_us_list');
 //------------------------------------------------------
 
 var app = express();
@@ -48,6 +50,8 @@ app.use('/nutrition/one', nutrition_one);
 
 app.use('/blog/list', blog_list);
 app.use('/blog/one', blog_one);
+
+app.use('/about/us/list', about_us_list);
 //------------------------------------------------------
 
 // catch 404 and forward to error handler
