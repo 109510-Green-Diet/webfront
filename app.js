@@ -24,6 +24,13 @@ var about_us_list = require('./routes/about_us_list');
 
 var user_login_form = require('./routes/user_login_form');
 
+//experience_add
+var experience_add_form = require('./routes/experience_add_form');
+var experience_add = require('./routes/experience_add');
+
+//recipe_add
+var recipe_add_form = require('./routes/recipe_add_form');
+var recipe_add = require('./routes/recipe_add');
 
 var app = express();
 
@@ -98,13 +105,16 @@ app.get('/auth/google/callback',
         console.log(req.session.passport.user.displayName);
         console.log(req.session.passport.user.emails[0].value);	    
         
-        res.redirect('/user/login/state');   //導向登入成功頁面
+        res.redirect('/');   //導向登入成功頁面
     });
 
 app.get('/user/logout', function(req, res){    
     req.logout();        //將使用者資料從session移除
     res.redirect('/');   //導向登出頁面
 });    
+//-------------FB登入----------------------------
+
+
 //---------------------------------------------
 app.use('/recipe/query/form', recipe_query_form);
 app.use('/recipe/query', recipe_query);
@@ -121,6 +131,16 @@ app.use('/blog/one', blog_one);
 app.use('/about/us/list', about_us_list);
 
 app.use('/user/login/form', user_login_form);
+
+//experience_add
+app.use('/experience/add/form', experience_add_form);
+app.use('/experience/add', experience_add);
+
+//recipe_add
+app.use('/recipe/add/form', recipe_add_form);
+app.use('/recipe/add', recipe_add);
+
+app.use(express.static('public/picture'));
 
 var session = require('express-session');
 app.use(session({secret: '請更改成一個隨機字串用來加密產生的signedCookie', cookie: { maxAge: 60000 }}));
